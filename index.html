@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paramount Digital Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/popups.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="noise-overlay"></div>
+
+  <canvas id="bgCanvas"></canvas>
+
+  <nav>
+    <div class="nav-logo">
+      PARAMOUNT DIGITAL<span>SERVICES</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#rates">Rates</a></li>
+      <li><button class="nav-btn" onclick="openPopup('contact')">Contact</button></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#work" onclick="closeMobileMenu()">Work</a>
+    <a href="#rates" onclick="closeMobileMenu()">Rates</a>
+    <button onclick="openPopup('contact'); closeMobileMenu()">Contact</button>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-tag">Est. 2024 &nbsp;·&nbsp; Digital Excellence</div>
+      <h1 class="hero-title">
+        We Build<br>
+        <em>Digital</em>
+        Empires.
+      </h1>
+      <p class="hero-sub">
+        Paramount Digital Services delivers world-class creative and digital solutions — from brand identity to full web experiences, we make you impossible to ignore.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openPopup('contact')">Start a Project</button>
+        <a href="#work" class="btn-ghost">View Our Work</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ============ STATS STRIP ============ -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-num" data-target="120">0</span>
+      <span class="stat-label">Projects Delivered</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="85">0</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="5">0</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="12">0</span>
+      <span class="stat-label">Service Verticals</span>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="section-header">
+      <div>
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Our Services</h2>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <span class="service-icon">🎨</span>
+        <div class="service-name">Graphic Design & Branding</div>
+        <p class="service-desc">Logos, brand kits, visual identities, and print materials that make your brand unforgettable and consistent across every touchpoint.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <span class="service-icon">📱</span>
+        <div class="service-name">Social Media Management</div>
+        <p class="service-desc">Content strategy, post creation, scheduling, and analytics — we grow your audience and keep your brand voice sharp and consistent.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <span class="service-icon">💻</span>
+        <div class="service-name">Web Design & Development</div>
+        <p class="service-desc">Stunning, high-performance websites and landing pages built to convert. From concept to deployment, we handle everything.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <span class="service-icon">🎬</span>
+        <div class="service-name">Content Creation & Video</div>
+        <p class="service-desc">Scripts, shoots, edits — compelling video content for social media, ads, and brand storytelling that stops the scroll.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">05</div>
+        <span class="service-icon">📊</span>
+        <div class="service-name">Digital Marketing & SEO</div>
+        <p class="service-desc">Paid ads, SEO, email campaigns, and analytics that drive real traffic, real leads, and real revenue for your business.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">06</div>
+        <span class="service-icon">⚡</span>
+        <div class="service-name">& Much More</div>
+        <p class="service-desc">From consulting and strategy to copywriting and photography — we are your all-in-one digital partner. Let's talk about what you need.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work" style="padding-top:0;">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Previous Work</h2>
+      </div>
+    </div>
+    <div class="work-grid">
+      <div class="work-card wide reveal" onclick="openWorkDetail('brand-overhaul')">
+        <div class="work-card-bg">🎨</div>
+        <div class="work-card-info">
+          <div class="work-tag">Branding · Identity</div>
+          <div class="work-title">LuxCore Brand Overhaul</div>
+        </div>
+        <div class="work-card-overlay"><button class="work-view-btn">View Project</button></div>
+      </div>
+      <div class="work-card reveal" onclick="openWorkDetail('social-campaign')">
+        <div class="work-card-bg">📱</div>
+        <div class="work-card-info">
+          <div class="work-tag">Social Media</div>
+          <div class="work-title">NovaTrend Campaign</div>
+        </div>
+        <div class="work-card-overlay"><button class="work-view-btn">View Project</button></div>
+      </div>
+      <div class="work-card reveal" onclick="openWorkDetail('web-launch')">
+        <div class="work-card-bg">💻</div>
+        <div class="work-card-info">
+          <div class="work-tag">Web Design</div>
+          <div class="work-title">Vertex Agency Site</div>
+        </div>
+        <div class="work-card-overlay"><button class="work-view-btn">View Project</button></div>
+      </div>
+      <div class="work-card wide reveal" onclick="openWorkDetail('video-series')">
+        <div class="work-card-bg">🎬</div>
+        <div class="work-card-info">
+          <div class="work-tag">Content · Video</div>
+          <div class="work-title">Apex Product Series</div>
+        </div>
+        <div class="work-card-overlay"><button class="work-view-btn">View Project</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rates" style="padding-top:0;">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title">Rate Card</h2>
+      </div>
+    </div>
+    <div class="rate-grid">
+      <div class="rate-card reveal">
+        <div class="rate-name">Starter</div>
+        <div class="rate-price">$299</div>
+        <div class="rate-per">per project</div>
+        <div class="rate-divider"></div>
+        <div class="rate-feature">Logo & basic brand kit</div>
+        <div class="rate-feature">5 social media posts</div>
+        <div class="rate-feature">1-page landing site</div>
+        <div class="rate-feature">1 round of revisions</div>
+        <div class="rate-feature">7-day turnaround</div>
+        <button class="rate-cta" onclick="openPopup('contact')">Get Started</button>
+      </div>
+      <div class="rate-card featured reveal">
+        <div class="rate-badge">Most Popular</div>
+        <div class="rate-name">Growth</div>
+        <div class="rate-price">$799</div>
+        <div class="rate-per">per month</div>
+        <div class="rate-divider"></div>
+        <div class="rate-feature">Full brand identity</div>
+        <div class="rate-feature">20 social posts / month</div>
+        <div class="rate-feature">Multi-page website</div>
+        <div class="rate-feature">Monthly video content</div>
+        <div class="rate-feature">Unlimited revisions</div>
+        <button class="rate-cta" onclick="openPopup('contact')">Get Started</button>
+      </div>
+      <div class="rate-card reveal">
+        <div class="rate-name">Paramount</div>
+        <div class="rate-price">Custom</div>
+        <div class="rate-per">enterprise pricing</div>
+        <div class="rate-divider"></div>
+        <div class="rate-feature">Everything in Growth</div>
+        <div class="rate-feature">Dedicated account manager</div>
+        <div class="rate-feature">Custom dev solutions</div>
+        <div class="rate-feature">Priority 24/7 support</div>
+        <div class="rate-feature">Monthly strategy calls</div>
+        <button class="rate-cta" onclick="openPopup('contact')">Let's Talk</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand-name">Paramount Digital Services</div>
+        <p class="footer-brand-desc">Your all-in-one digital partner. We create, manage, and grow brands across every digital channel with precision and purpose.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Pages</div>
+        <button class="footer-link" onclick="openPopup('about')">About Us</button>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#work" class="footer-link">Portfolio</a>
+        <a href="#rates" class="footer-link">Rates</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Info</div>
+        <button class="footer-link" onclick="openPopup('contact')">Contact Us</button>
+        <button class="footer-link" onclick="openPopup('terms')">Terms of Service</button>
+        <button class="footer-link" onclick="openPopup('privacy')">Privacy Policy</button>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-info-item">📧 hello@paramountds.com</div>
+        <div class="footer-info-item">📞 +234 (0) 913-151-4244</div>
+        <div class="footer-info-item">📍 Available Worldwide</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span>Paramount Digital Services</span>. All rights reserved.</div>
+      <div class="social-links">
+        <a href="#" class="social-link" title="Instagram">IG</a>
+        <a href="#" class="social-link" title="Twitter/X">𝕏</a>
+        <a href="#" class="social-link" title="LinkedIn">in</a>
+        <a href="#" class="social-link" title="TikTok">TT</a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <div class="popup-overlay" id="popup-about" onclick="closePopupOnOverlay(event,'about')">
+    <div class="popup">
+      <div class="popup-header">
+        <div>
+          <div class="popup-label">Our Story</div>
+          <div class="popup-title">About Us</div>
+        </div>
+        <button class="popup-close" onclick="closePopup('about')">✕</button>
+      </div>
+      <div class="popup-body">
+        <div class="about-highlight">"We are not just an agency — we are architects of digital presence."</div>
+        <p class="about-text">Paramount Digital Services was founded with one mission: to give every brand — no matter how big or small — access to world-class digital work. We believed there was a gap between quality and affordability, and we built this company to close it.</p>
+        <p class="about-text">From logo designs that become icons, to social media strategies that drive real growth, to websites that convert — we approach every project with the intensity of a startup and the discipline of an agency.</p>
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">🎯</div>
+            <div class="about-value-title">Purpose-Driven</div>
+            <div class="about-value-desc">Every decision we make is tied to a clear goal — your growth.</div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">⚡</div>
+            <div class="about-value-title">Fast & Reliable</div>
+            <div class="about-value-desc">We deliver on time, every time, without cutting corners.</div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🌍</div>
+            <div class="about-value-title">Globally Minded</div>
+            <div class="about-value-desc">Diverse perspectives, universal quality standards.</div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🤝</div>
+            <div class="about-value-title">Client-First</div>
+            <div class="about-value-desc">Your success is our success. We are in this together.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="popup-overlay" id="popup-contact" onclick="closePopupOnOverlay(event,'contact')">
+    <div class="popup">
+      <div class="popup-header">
+        <div>
+          <div class="popup-label">Reach Out</div>
+          <div class="popup-title">Contact Us</div>
+        </div>
+        <button class="popup-close" onclick="closePopup('contact')">✕</button>
+      </div>
+      <div class="popup-body">
+        <div class="contact-grid">
+          <div class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-type">Email</div><div class="contact-value">hello@paramountds.com</div></div></div>
+          <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-type">Phone</div><div class="contact-value">+234 9131514244</div></div></div>
+          <div class="contact-item"><div class="contact-icon">📱</div><i class="fab fa-facebook"></i></a>WhatsApp</div><div class="contact-value">+234 9131514244</div></div></div>
+          <div class="contact-item"><div class="contact-icon">🕐</div><div><div class="contact-type">Response Time</div><div class="contact-value">Within 24 hours</div></div></div>
+        </div>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input class="form-input" type="text" placeholder="John Doe" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input class="form-input" type="email" placeholder="you@example.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Service Needed</label>
+            <select class="form-input form-select">
+              <option value="">Select a service...</option>
+              <option>Graphic Design & Branding</option>
+              <option>Social Media Management</option>
+              <option>Web Design & Development</option>
+              <option>Content Creation & Video</option>
+              <option>Digital Marketing & SEO</option>
+              <option>Full Package / Multiple Services</option>
+              <option>Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Budget Range</label>
+            <select class="form-input form-select">
+              <option value="">Select budget...</option>
+              <option>Under $500</option>
+              <option>$500 – $1,000</option>
+              <option>$1,000 – $3,000</option>
+              <option>$3,000+</option>
+              <option>Let's discuss</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tell Us About Your Project</label>
+            <textarea class="form-textarea" placeholder="Describe your project goals..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORK DETAIL -->
+  <div class="popup-overlay" id="popup-work" onclick="closePopupOnOverlay(event,'work')">
+    <div class="popup">
+      <div class="popup-header">
+        <div>
+          <div class="popup-label">Case Study</div>
+          <div class="popup-title" id="work-popup-title">Project</div>
+        </div>
+        <button class="popup-close" onclick="closePopup('work')">✕</button>
+      </div>
+      <div class="popup-body" id="work-popup-body"></div>
+    </div>
+  </div>
+
+  <!-- TERMS -->
+  <div class="popup-overlay" id="popup-terms" onclick="closePopupOnOverlay(event,'terms')">
+    <div class="popup">
+      <div class="popup-header">
+        <div><div class="popup-label">Legal</div><div class="popup-title">Terms of Service</div></div>
+        <button class="popup-close" onclick="closePopup('terms')">✕</button>
+      </div>
+      <div class="popup-body">
+        <div class="terms-section"><div class="terms-heading">1. Services & Delivery</div><p class="terms-text">Paramount Digital Services agrees to deliver the services outlined in the signed proposal or invoice. Timelines begin once full payment or agreed deposit is received, and all required materials are provided by the client.</p></div>
+        <div class="terms-section"><div class="terms-heading">2. Payment Terms</div><p class="terms-text">All projects require a 50% deposit upfront. Final deliverables are released upon full payment. Retainer packages are billed monthly in advance. Late payments incur a 5% monthly fee after a 7-day grace period.</p></div>
+        <div class="terms-section"><div class="terms-heading">3. Revisions</div><p class="terms-text">Each package includes a specified number of revision rounds. Revisions beyond the included rounds are billed at $50/hour. Revisions must be requested within 7 days of delivery.</p></div>
+        <div class="terms-section"><div class="terms-heading">4. Intellectual Property</div><p class="terms-text">Upon final payment, the client receives full ownership of final deliverables. Paramount Digital Services retains the right to display the work in its portfolio unless otherwise agreed in writing.</p></div>
+        <div class="terms-section"><div class="terms-heading">5. Cancellations & Refunds</div><p class="terms-text">Deposits are non-refundable once work has commenced. If a project is cancelled mid-way, the client owes payment for all work completed to date.</p></div>
+        <div class="terms-section"><div class="terms-heading">6. Confidentiality</div><p class="terms-text">We treat all client information as strictly confidential. We do not share, sell, or disclose client data or project details to third parties without written consent.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY -->
+  <div class="popup-overlay" id="popup-privacy" onclick="closePopupOnOverlay(event,'privacy')">
+    <div class="popup">
+      <div class="popup-header">
+        <div><div class="popup-label">Legal</div><div class="popup-title">Privacy Policy</div></div>
+        <button class="popup-close" onclick="closePopup('privacy')">✕</button>
+      </div>
+      <div class="popup-body">
+        <div class="privacy-intro">Your privacy matters to us. Paramount Digital Services only collects information necessary to deliver our services, and we never sell your data.</div>
+        <div class="terms-section"><div class="terms-heading">Information We Collect</div><p class="terms-text">We collect basic contact information provided voluntarily through our contact forms, as well as project-related information needed to deliver services.</p></div>
+        <div class="terms-section"><div class="terms-heading">How We Use Your Information</div><p class="terms-text">Your information is used solely to communicate with you, deliver agreed services, send invoices, and occasionally share relevant updates about our offerings.</p></div>
+        <div class="terms-section"><div class="terms-heading">Data Sharing</div><p class="terms-text">We do not sell, rent, or trade your personal information. We may share data with trusted third-party tools strictly to deliver our services, all bound by confidentiality agreements.</p></div>
+        <div class="terms-section"><div class="terms-heading">Your Rights</div><p class="terms-text">You have the right to access, correct, or request deletion of your personal data at any time. Contact us at hello@paramountds.com and we will respond within 5 business days.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✦</span>
+    <span id="toast-msg">Message sent!</span>
+  </div>
+
+  <script src="js/background.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
